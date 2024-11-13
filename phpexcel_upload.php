@@ -32,7 +32,7 @@ try {
     for ($row = 2; $row <= $highestRow; $row++) {
         $rowData = array();
 
-        // 각 행의 데이터를 읽어옴
+        // 각 행의 데이터를 읽어옴, $c1~는 엑셀컬럼맞춰서 수정하기
         for ($col = 0; $col < $highestColumnIndex; $col++) {
             $rowData[$columnNames[$col]] = $worksheet->getCellByColumnAndRow($col, $row)->getValue();
         }
